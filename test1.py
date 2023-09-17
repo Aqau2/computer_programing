@@ -1,5 +1,22 @@
-name = input("이름을 입력하세여:")
-number_one = input("첫번뺴 숫자를 입력:")
-number_two = input("두번쨰 숫자를 입력")
+exchange = {
+    'usd': 1320,
+    'jpy': 950,
+    'cny': 182
+}
 
-print("안녕하세요" +name+ "님. 입력하신 두 숫자는" +number_one+ "와" +number_two+ "입니다")
+money = [13, 200, 13]
+
+# 각 통화를 한화로 환산
+total = 0
+
+# 달러 환산
+total += money[0] * exchange['usd']
+
+# 엔화 환산
+total += money[1] * exchange['jpy']
+
+# 위안 환산
+total += money[2] * exchange['cny']
+
+# 결과 출력
+print("철수가 가지고 있는 돈의 원화 가치는", total, "원 입니다.")
